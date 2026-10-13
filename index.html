@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arti Singh - Exclusive Community</title>
+    <!-- Tailwind CSS for modern and premium styling -->
+    <script src="https://tailwindcss.com"></script>
+    <style>
+        body { background-color: #0d0d0d; color: #ffffff; font-family: sans-serif; }
+    </style>
+</head>
+<body class="flex justify-center items-center min-h-screen p-4">
+
+    <!-- Mobile Frame Container -->
+    <div class="w-full max-w-md bg-[#121212] rounded-3xl overflow-hidden shadow-2xl border border-gray-800 relative pb-20">
+        
+        <!-- Header Image & Badges Section -->
+        <div class="relative h-96 bg-cover bg-center" style="background-image: url('https://unsplash.com');">
+            <!-- Blur Overlay for aesthetic dark mood -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/50"></div>
+            
+            <!-- Badges -->
+            <div class="absolute top-4 left-4 flex items-center bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-green-400">
+                <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span> ONLINE
+            </div>
+            <div class="absolute top-4 right-4 bg-amber-500/20 backdrop-blur-md border border-amber-500/50 px-3 py-1 rounded-full text-xs font-semibold text-amber-400">
+                Exclusive Community
+            </div>
+        </div>
+
+        <!-- Profile Detail Section -->
+        <div class="px-6 -mt-16 relative z-10 text-center">
+            <!-- Circle Avatar -->
+            <div class="w-28 h-28 mx-auto rounded-full border-4 border-amber-400 overflow-hidden shadow-xl bg-gray-900">
+                <img src="https://unsplash.com" alt="Avatar" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Name and Verification -->
+            <h1 class="text-2xl font-bold mt-4 text-amber-400 flex items-center justify-center gap-1">
+                Arti Singh 
+                <!-- Blue Tick SVG -->
+                <svg class="w-5 h-5 text-blue-500 fill-current" viewBox="0 0 20 20"><path d="M6.269 18.253a.75.75 0 0 1 0-1.06l10.924-10.925H10.25a.75.75 0 0 1 0-1.5h9a.75.75 0 0 1 .75.75v9a.75.75 0 0 1-1.5 0V7.328L7.581 18.253a.75.75 0 0 1-1.06 0Z"/></svg>
+            </h1>
+            <p class="text-gray-400 text-sm mt-1">Exclusive Community Access</p>
+
+            <!-- Members Counter Badge -->
+            <div class="inline-block bg-zinc-800/80 px-4 py-1.5 rounded-full text-xs font-medium text-amber-300 mt-3 border border-zinc-700">
+                ● 7,530+ Members Joined
+            </div>
+            
+            <p class="text-gray-500 text-xs mt-2 flex items-center justify-center gap-1">
+                🔒 PRIVATE COMMUNITY
+            </p>
+        </div>
+
+        <!-- Limited Time Offer & Countdown Timer Card -->
+        <div class="mx-4 mt-6 bg-gradient-to-br from-rose-950/40 to-purple-950/40 border border-rose-500/30 rounded-2xl p-5 text-center relative overflow-hidden">
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-xs font-bold tracking-wider text-rose-400 uppercase">Ltd Time Offer</span>
+                <span class="bg-amber-400 text-black text-xs font-bold px-2 py-0.5 rounded-md">78% OFF</span>
+            </div>
+
+            <!-- Timer Graphics -->
+            <div class="flex justify-center items-center gap-3 my-2">
+                <div>
+                    <div id="minutes" class="bg-zinc-900 border border-zinc-800 text-2xl font-mono font-bold px-3 py-2 rounded-xl text-white">09</div>
+                    <span class="text-[10px] text-gray-500 block mt-1 uppercase tracking-widest">Min</span>
+                </div>
+                <span class="text-2xl font-bold text-rose-500 animate-pulse">:</span>
+                <div>
+                    <div id="seconds" class="bg-zinc-900 border border-zinc-800 text-2xl font-mono font-bold px-3 py-2 rounded-xl text-white">57</div>
+                    <span class="text-[10px] text-gray-500 block mt-1 uppercase tracking-widest">Sec</span>
+                </div>
+            </div>
+
+            <!-- Pricing Grid -->
+            <div class="flex justify-between items-center mt-4 pt-4 border-t border-zinc-800/60">
+                <div class="text-left">
+                    <span class="text-[10px] text-gray-500 block uppercase">Regular Price</span>
+                    <span class="text-gray-400 line-through text-lg font-semibold">₹899</span>
+                </div>
+                <div class="text-right">
+                    <span class="text-[10px] text-amber-400 block uppercase font-medium">Special Access Price</span>
+                    <span class="text-amber-400 text-2xl font-black">₹199</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Floating Pay Button -->
+        <div class="absolute bottom-0 inset-x-0 bg-[#121212]/90 backdrop-blur-md p-3 border-t border-zinc-800/50">
+            <!-- ⚠️ REPLACE THE HREF LINK BELOW WITH YOUR COSMOFEED LINK -->
+            <a href="YOUR_COSMOFEED_LINK_HERE" class="w-full bg-amber-400 hover:bg-amber-500 text-black font-bold py-3.5 px-4 rounded-xl flex justify-between items-center transition-all shadow-lg active:scale-[0.98]">
+                <span class="flex items-center gap-2">
+                    💳 PAY NOW — ₹199
+                </span>
+                <span class="text-lg">→</span>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Live JavaScript Code for the Repeating Countdown Timer -->
+    <script>
+        function startTimer(duration, displayMin, displaySec) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                displayMin.textContent = minutes;
+                displaySec.textContent = seconds;
+
+                if (--timer < 0) {
+                    timer = duration; // Loops back when it hits 00:00 to maintain the rush!
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            var tenMinutes = 60 * 9 + 57, // 9 minutes and 57 seconds
+                displayMin = document.querySelector('#minutes'),
+                displaySec = document.querySelector('#seconds');
+            startTimer(tenMinutes, displayMin, displaySec);
+        };
+    </script>
+</body>
+</html>
